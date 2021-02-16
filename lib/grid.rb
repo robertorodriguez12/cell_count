@@ -1,19 +1,23 @@
 require '../lib/cell'
 
 class Grid
-    attr_reader :column1, :column2, :column3, :center_cell
+    attr_reader :world, :col1, :col2, :col3
     def initialize
-        @column1 = []
-        @column2 = []
-        @column3 = []
-        @center_cell = @column2[1]
+        @world = [@col1= [], @col2= [], @col3= []]
     end
 
     def generate_cells
-        3.times do
-            @column1 << Cell.new
-            @column2 << Cell.new
-            @column3 << Cell.new
+        @world.each do |column|
+            3.times do
+                column << Cell.new
+            end
         end
+    end
+
+    def count_active_cells
+        center = @col2[1]
+        counter = 0
+
+        # binding.pry
     end
 end
