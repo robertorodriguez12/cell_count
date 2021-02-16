@@ -1,12 +1,13 @@
 require '../lib/cell'
 
 class Grid
-    attr_reader :column1, :column2, :column3
+    attr_reader :column1, :column2, :column3, :center_cell
     def initialize
         @column1 = []
         @column2 = []
         @column3 = []
         generate_cells
+        @center_cell = @column2[1]
     end
 
     def generate_cells
