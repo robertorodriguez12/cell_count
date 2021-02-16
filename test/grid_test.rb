@@ -35,7 +35,7 @@ class GridTest < MiniTest::Test
         assert_equal 0, @grid.col3.length
     end
 
-    def test_cells_are_generated_once_command_is_given
+    def test_cells_can_be_generated
         @grid.generate_cells
         assert_equal 3, @grid.col1.length
         assert_equal 3, @grid.col2.length
@@ -47,6 +47,10 @@ class GridTest < MiniTest::Test
         @grid.col1.push(@cell, @cell2, @cell3)
         @grid.col2.push(@cell4, @cell5, @cell6)
         @grid.col3.push(@cell7, @cell8, @cell9)
-        assert_equal 5, @grid.count_active_cells
+        expected = "There are 5 active neighbors"
+        assert_equal expected, @grid.count_active_neighbors
     end
+
+    # look into making a 2 dimensional array (x, y)
+    # ask them if they want user input for the bonus area
 end

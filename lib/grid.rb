@@ -14,10 +14,17 @@ class Grid
         end
     end
 
-    def count_active_cells
+    def count_active_neighbors
         center = @col2[1]
         counter = 0
-
-        # binding.pry
+        @world.each do |column|
+            column.each do |cell|
+                next if cell == center
+                if cell.active == true
+                    counter += 1
+                end 
+            end
+        end
+        p "There are #{counter} active neighbors" 
     end
 end
