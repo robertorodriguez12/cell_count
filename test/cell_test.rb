@@ -7,8 +7,9 @@ class CellTest < MiniTest::Test
         assert_instance_of Cell, cell
     end
     
-    def test_it_begins_with_false_active_status
-        cell = Cell.new 
-        assert_equal false, cell.active?
+    def test_it_begins_with_random_active_status
+        cell = Cell.new
+        expected = [true, false] 
+        assert_includes expected, cell.active?
     end
 end 
