@@ -50,7 +50,4 @@ class GridTest < MiniTest::Test
         expected = "There are 5 active neighbors"
         assert_equal expected, @grid.count_active_neighbors
     end
-
-    # look into making a 2 dimensional array (x, y)
-    # ask them if they want user input for the bonus area
 end
