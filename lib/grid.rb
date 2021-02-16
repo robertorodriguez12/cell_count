@@ -6,7 +6,6 @@ class Grid
         @column1 = []
         @column2 = []
         @column3 = []
-        generate_cells
         @center_cell = @column2[1]
     end
 
