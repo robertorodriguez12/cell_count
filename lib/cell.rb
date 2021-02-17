@@ -1,5 +1,5 @@
 class Cell
-    attr_reader :active 
+    attr_reader :active, :coordinate
     def initialize(coordinate)
         @coordinate = coordinate
         @active = nil
