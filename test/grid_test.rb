@@ -11,14 +11,8 @@ class GridTest < MiniTest::Test
     end
     
     def test_cells_can_be_generated
-        expected = ['A1', 'A2', 'A3',
-                 'B1', 'B2', 'B3',
-                'C1', 'C2', 'C3']
-        assert_equal expected, @grid.cells.keys
-    end
-
-    def test_grid_has_valid_cell_coordinates
-        assert_equal true, @grid.valid_selection('A1')
-        assert_equal false, @grid.valid_selection('D1')
+        assert_equal 3, @grid.cells[0].length
+        assert_equal 3, @grid.cells[1].length
+        assert_equal 3, @grid.cells[2].length
     end
 end
