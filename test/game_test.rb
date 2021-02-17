@@ -11,12 +11,11 @@ class GameTest < MiniTest::Test
     end
 
     def test_game_begins_with_attributes
-        assert_equal false, @game.start
         assert_instance_of Grid, @game.grid
     end
 
     def test_game_can_find_cell_from_user_input
         chosen_cell = @game.find_cell('A1')
-        assert_equal 'A1', chosen_cell[0].coordinate
+        assert_equal 'A1', chosen_cell.coordinate
     end       
 end
