@@ -1,3 +1,6 @@
+require 'rubygems'
+gem 'mocha'
 require 'pry'
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'mocha/minitest'

@@ -1,5 +1,4 @@
-require '../lib/grid'
+require '../lib/game'
+require 'matrix'
 
-grid = Grid.new
-grid.generate_cells
-grid.count_active_neighbors
+game = Game.new
