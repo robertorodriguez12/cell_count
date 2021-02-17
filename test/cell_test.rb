@@ -8,14 +8,10 @@ class CellTest < MiniTest::Test
     def test_it_exists
         assert_instance_of Cell, @cell
     end
-    
-    def test_it_begins_with_false_active_status
-        assert_equal false, @cell.active?
-    end
 
     def test_cell_can_be_activated
-        @cell.activate
-        assert_equal true, @cell.active?
+        expected = [true, false]
+        assert_includes expected, @cell.active?
     end
 
     def test_cell_coordinate_can_be_rendered

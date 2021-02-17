@@ -2,11 +2,12 @@ class Cell
     attr_reader :active 
     def initialize(coordinate)
         @coordinate = coordinate
-        @active = false
+        @active = nil
+        activate
     end
     
     def activate
-        @active = true
+        @active = [true, false].sample
     end
 
     def active?
