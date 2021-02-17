@@ -23,3 +23,11 @@
 - Navigate into the `lib` folder and enter the following command in your terminal `ruby runner.rb`
 - You will see output in the terminal that will look like this: "There are 4 active neighbors"
     - P.S: The number of active neighbors will likely be different each time you execute the above command since a cell's active status is assigned at random
+
+### Screen shots from program execution
+- 1st iteration
+![Screen Shot 2021-02-17 at 1 07 41 PM](https://user-images.githubusercontent.com/56448912/108273537-eb00d000-7130-11eb-8ec7-05496def099f.png)
+- 2nd iteration
+![Screen Shot 2021-02-17 at 1 07 25 PM](https://user-images.githubusercontent.com/56448912/108273621-04a21780-7131-11eb-93c0-b4a3ff998c6f.png)
+- 3rd iteration
+![Screen Shot 2021-02-17 at 1 07 01 PM](https://user-images.githubusercontent.com/56448912/108273675-1e435f00-7131-11eb-84ec-63a4b3cb5e01.png)
