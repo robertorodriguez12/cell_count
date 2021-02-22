@@ -32,34 +32,36 @@ class Grid
         # this does the same thing as min_x but it is for the y axis(up / down). This will be used below in the search below portion
         max_y = false
         # does the same as max_x except for the y axis (up / down). This will stop an upward search when the beginning cell is at the top edge. 
-        # left / right search
+
+        # left search
         if index[0] != 0
             counter += 1 if starting_row[index[0]- 1].active == true
         else 
             min_x = true
         end
         
-        # binding.pry
+        # right search
         if starting_row[index[0] + 1].nil? == false
             counter += 1 if starting_row[index[0]+ 1].active == true 
         else
             max_x = true 
         end
         
-        # up / down search
+        # down search
         if index[1] != 0
             counter += 1 if @cells[index[0]][index[1] - 1].active == true
         else
             min_y = true  
         end
         
+        # up search
         if @cells[index[1]][index[1] + 1].nil? == false
             counter += 1 if @cells[index[0]][index[1] + 1].active == true
         else
             max_y = true  
         end
         
-        # up right search @cells[index[0] + 1][index[1] - 1].nil? == false ||
+        # up right search
         if  max_x != true && min_y != true
             counter += 1 if @cells[index[0] + 1][index[1] - 1].active == true  
         end
