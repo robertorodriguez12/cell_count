@@ -25,9 +25,13 @@ class Grid
         index = Matrix[*cells].index(cell)
         starting_row = @cells[index[0]]
         min_x = false
+        # min_x will turn to true if the cell at position 0 in the array. This is supposed to stop the search from looking to the left neighbor when the beginning cell is at position 0. (It wont read the object at position 2 in the same array when looking to the left)
         max_x = false
+        # similar to min_x, this becomes true when the cell that is passed in is determined to be on the left edge or position 2 in an array. That way it does not look to the right or at position 3 which is non-existent. 
         min_y = false
+        # this does the same thing as min_x but it is for the y axis(up / down). This will be used below in the search below portion
         max_y = false
+        # does the same as max_x except for the y axis (up / down). This will stop an upward search when the beginning cell is at the top edge. 
         # left / right search
         if index[0] != 0
             counter += 1 if starting_row[index[0]- 1].active == true
