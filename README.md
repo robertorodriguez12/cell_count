@@ -12,10 +12,11 @@
 
 - Fork this repository on to your local computer
 - Navigate into the `CELL_COUNT` repository and run `gem install mocha` in your terminal. This gem will be needed for testing purposes
+- This Repository uses the ```Matrix``` Gem. According to ruby-docs and Google searches, there is no need to install this onto your system. If you want to see where it is being required, it is on line 3 of the Grid.rb  file inside the lib folder. 
 
 ### Testing
 
-- Navigate into the testing folder, there are three files but only two tests
+- Navigate into the testing folder, there are four files three of those are tests
 - You can run these tests by entering `ruby <file_name>.rb` and pressing enter
     - Example: ruby cell_test.rb
 
